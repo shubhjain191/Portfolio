@@ -1,13 +1,26 @@
 import React from 'react'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
+import About from './components/About'
+import Services from './components/Services'
+import Education from './components/Education'
+import Projects from './components/Projects'
+import Contactme from './components/Contact/Contactme'
+import Footer from './components/Footer/footer'
+
 
 const App = () => {
   return (
-    <div className='bg-gradient-to-br from-white via-blue-50 to-blue-100 min-h-screen text-black p-4'>
-      <div className='border border-gray-200 rounded-xl min-h-[calc(100vh-2rem)] backdrop-blur-sm bg-white/50'>
+    <div className=' min-h-screen text-black p-4'>
+      <div className='border border-gray-200 rounded-xl min-h-[calc(100vh-2rem)] backdrop-blur-sm bg-gradient-to-br from-white via-blue-50 to-blue-100'>
         <Navbar />
         <Hero/>
+        <About/>
+        <Services/>
+        <Education/>
+        <Projects/>
+        <Contactme/>
+        <Footer/>
       </div>
     </div>
   )
