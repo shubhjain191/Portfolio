@@ -75,6 +75,23 @@ const ProjectsSection = () => {
         "Cross-device responsive interface"
       ],
       tech: ["React.js", "Vite", "Node.js", "MongoDB", "Express.js", "JWT", "ClipDrop API", "Tailwind CSS"]
+    },
+    {
+      title: "AI Logo Generator 🚀",
+      description: "This project demonstrates how to create a stunning AI-powered logo generator using modern web technologies and AI tools. By combining Next.js, React, the Gemini API, and Hugging Face, you'll learn to generate unique logos programmatically. Whether you're a beginner or a seasoned developer, this project is a fun and practical way to explore AI and full-stack development! 🎨💻",
+      image: 'path/to/your/image.png',
+      tags: ["AI", "Logo Generation", "Next.js", "React"],
+      category: "AI & Machine Learning",
+      links: {
+        github: "https://github.com/shubhjain191/ai-logo-generator"
+      },
+      achievements: [
+        "Generate logos using AI models from Hugging Face and Gemini API",
+        "Responsive UI built with Next.js and React",
+        "User authentication with Clerk",
+        "Credit-based usage system for logo generation"
+      ],
+      tech: ["Next.js", "React", "Gemini API", "Hugging Face", "Clerk"]
     }
   ];
   
