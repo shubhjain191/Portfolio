@@ -5,7 +5,7 @@ import imagitext from '../assets/imagitext.png'
 import edumern from '../assets/edumern.png'
 import appointify from '../assets/appointify.png'
 import formfit from '../assets/formfit.png'
-import aiLogoGenerator from '../assets/ailogogenerator.png'
+import aiLogoGenerator from '../assets/AILogoGenerator.png'
 
 const ProjectsSection = () => {
   const [activeFilter, setActiveFilter] = useState('All');
