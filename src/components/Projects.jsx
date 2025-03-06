@@ -5,6 +5,7 @@ import imagitext from '../assets/imagitext.png'
 import edumern from '../assets/edumern.png'
 import appointify from '../assets/appointify.png'
 import formfit from '../assets/formfit.png'
+import aiLogoGenerator from '../assets/ailogogenerator.png'
 
 const ProjectsSection = () => {
   const [activeFilter, setActiveFilter] = useState('All');
@@ -79,7 +80,7 @@ const ProjectsSection = () => {
     {
       title: "AI Logo Generator 🚀",
       description: "This project demonstrates how to create a stunning AI-powered logo generator using modern web technologies and AI tools. By combining Next.js, React, the Gemini API, and Hugging Face, you'll learn to generate unique logos programmatically. Whether you're a beginner or a seasoned developer, this project is a fun and practical way to explore AI and full-stack development! 🎨💻",
-      image: 'path/to/your/image.png',
+      image: aiLogoGenerator,
       tags: ["AI", "Logo Generation", "Next.js", "React"],
       category: "AI & Machine Learning",
       links: {
