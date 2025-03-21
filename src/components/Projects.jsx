@@ -6,7 +6,7 @@ import edumern from '../assets/edumern.png';
 import appointify from '../assets/appointify.png';
 import formfit from '../assets/formfit.png';
 import aiLogoGenerator from '../assets/AILogoGenerator.png';
-import careerMentorAI from '../assets/careerMentorAI.png'; // Add your actual image here
+import careerMentorAI from '../assets/careermentorAI.png'; // Add your actual image here
 
 const ProjectsSection = () => {
   const [activeFilter, setActiveFilter] = useState('All');
