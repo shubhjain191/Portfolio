@@ -6,7 +6,8 @@ import Services from './components/Services'
 import Education from './components/Education'
 import Projects from './components/Projects'
 import Contactme from './components/Contact/Contactme'
-import Footer from './components/Footer/footer'
+import Footer from './components/footer'
+import Skills from './components/skills'
 
 
 const App = () => {
@@ -17,8 +18,9 @@ const App = () => {
         <Hero/>
         <About/>
         <Services/>
-        <Education/>
         <Projects/>
+        <Skills />
+        <Education/>
         <Contactme/>
         <Footer/>
       </div>

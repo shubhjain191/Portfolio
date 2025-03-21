@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { Code, Database, Activity, ExternalLink, Github } from 'lucide-react';
 import { motion } from 'framer-motion';
-import imagitext from '../assets/imagitext.png'
-import edumern from '../assets/edumern.png'
-import appointify from '../assets/appointify.png'
-import formfit from '../assets/formfit.png'
-import aiLogoGenerator from '../assets/AILogoGenerator.png'
+import imagitext from '../assets/imagitext.png';
+import edumern from '../assets/edumern.png';
+import appointify from '../assets/appointify.png';
+import formfit from '../assets/formfit.png';
+import aiLogoGenerator from '../assets/AILogoGenerator.png';
+import careerMentorAI from '../assets/careerMentorAI.png'; // Add your actual image here
 
 const ProjectsSection = () => {
   const [activeFilter, setActiveFilter] = useState('All');
@@ -16,7 +17,7 @@ const ProjectsSection = () => {
       description: "A comprehensive Learning Management System built with the MERN stack. Features include secure authentication, course creation system, analytics dashboard, and Stripe payment integration for subscription management.",
       image: edumern,
       tags: ["MERN Stack", "Authentication", "Analytics", "Payments"],
-      category: "Web Development",
+      category: "Full-Stack Applications",
       links: {
         demo: "https://edumern.example.com",
         github: "https://github.com/shubhjain191/edumern"
@@ -33,7 +34,7 @@ const ProjectsSection = () => {
       description: "A full-stack healthcare appointment management platform. Allows patients to book appointments, doctors to manage their schedules, and administrators to oversee operations. Includes real-time tracking and payment integration.",
       image: appointify,
       tags: ["MERN Stack", "Healthcare", "Real-time", "Payments"],
-      category: "Web Development",
+      category: "Full-Stack Applications",
       links: {
         github: "https://github.com/shubhjain191/appointify"
       },
@@ -49,7 +50,7 @@ const ProjectsSection = () => {
       description: "An AI-powered fitness analysis system that uses computer vision to track and improve workout form. Provides real-time feedback and personalized recommendations based on performance metrics.",
       image: formfit,
       tags: ["AI", "Computer Vision", "Fitness", "Analytics"],
-      category: "AI & Machine Learning",
+      category: "Computer Vision",
       links: {
         demo: "https://formfit.example.com",
         github: "https://github.com/shubhjain191/formfit"
@@ -66,7 +67,7 @@ const ProjectsSection = () => {
       description: "A powerful AI-driven Text-to-Image Generator that transforms textual descriptions into stunning visuals. Features include real-time processing, user authentication, image downloading and sharing capabilities, all wrapped in a responsive UI.",
       image: imagitext,
       tags: ["AI", "Image Generation", "MERN Stack", "Authentication"],
-      category: "AI & Machine Learning",
+      category: "Generative AI",
       links: {
         github: "https://github.com/shubhjain191/imagitext"
       },
@@ -78,11 +79,11 @@ const ProjectsSection = () => {
       tech: ["React.js", "Vite", "Node.js", "MongoDB", "Express.js", "JWT", "ClipDrop API", "Tailwind CSS"]
     },
     {
-      title: "AI Logo Generator 🚀",
-      description: "This project demonstrates how to create a stunning AI-powered logo generator using modern web technologies and AI tools. By combining Next.js, React, the Gemini API, and Hugging Face, you'll learn to generate unique logos programmatically. Whether you're a beginner or a seasoned developer, this project is a fun and practical way to explore AI and full-stack development! 🎨💻",
+      title: "AI Logo Generator",
+      description: "This project demonstrates how to create a stunning AI-powered logo generator using modern web technologies and AI tools. By combining Next.js, React, the Gemini API, and Hugging Face, you'll learn to generate unique logos programmatically.",
       image: aiLogoGenerator,
       tags: ["AI", "Logo Generation", "Next.js", "React"],
-      category: "AI & Machine Learning",
+      category: "Generative AI",
       links: {
         github: "https://github.com/shubhjain191/ai-logo-generator"
       },
@@ -93,10 +94,27 @@ const ProjectsSection = () => {
         "Credit-based usage system for logo generation"
       ],
       tech: ["Next.js", "React", "Gemini API", "Hugging Face", "Clerk"]
+    },
+    {
+      title: "CareerMentor AI",
+      description: "An AI-powered career coaching platform built with Next.js. Features user authentication, onboarding, AI-generated industry insights, mock interviews, resume building, and cover letter generation with a responsive design.",
+      image: careerMentorAI, 
+      tags: ["AI", "Career Coaching", "Next.js", "Authentication"],
+      category: "Generative AI",
+      links: {
+        github: "https://github.com/shubhjain191/careermentor" 
+      },
+      achievements: [
+        "Personalized onboarding and career insights",
+        "AI-driven mock interview preparation",
+        "Downloadable AI-generated resumes and cover letters",
+        "Weekly insights via scheduled tasks"
+      ],
+      tech: ["Next.js", "Tailwind CSS", "Shadcn UI", "Prisma", "Clerk", "Gemini AI", "Inngest", "Neon"]
     }
   ];
   
-  const filters = ['All', 'Web Development', 'AI & Machine Learning'];
+  const filters = ['All', 'Full-Stack Applications', 'Computer Vision', 'Generative AI', ];
   
   const filteredProjects = activeFilter === 'All' 
     ? projects 
@@ -194,6 +212,16 @@ const ProjectsSection = () => {
                       >
                         <Github className="w-5 h-5" />
                       </a>
+                      {project.links.demo && (
+                        <a
+                          href={project.links.demo}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="p-2 bg-white/20 backdrop-blur-sm rounded-full hover:bg-white/40 transition-colors duration-200"
+                        >
+                          <ExternalLink className="w-5 h-5" />
+                        </a>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -202,9 +230,9 @@ const ProjectsSection = () => {
               <div className="p-4 sm:p-6">
                 <div className="flex items-start justify-between">
                   <h3 className="text-lg sm:text-xl font-bold text-gray-900">{project.title}</h3>
-                  {project.category === 'Web Development' ? (
+                  {project.category === 'Full-Stack Applications' || project.category === 'Healthcare Solutions' ? (
                     <Code className="w-5 h-5 text-blue-500" />
-                  ) : project.category === 'AI & Machine Learning' ? (
+                  ) : project.category === 'Computer Vision' || project.category === 'Generative AI' || project.category === 'AI Assistants' ? (
                     <Activity className="w-5 h-5 text-blue-500" />
                   ) : (
                     <Database className="w-5 h-5 text-blue-500" />
